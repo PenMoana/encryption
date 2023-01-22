@@ -1,6 +1,6 @@
 # encryption
 
-FIXME: description
+Learning about encryption
 
 ## Installation
 
