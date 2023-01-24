@@ -58,11 +58,16 @@
                     :x :y
                     :y :z
                     :z :a})
+
 (defn encrypt [codemap a]
   (get codemap a))
 
+(defn decrypt [codemap b]
+  (let [invertcodemap (zipmap (vals numbercodemap) (keys numbercodemap))]
+    (get invertcodemap b)))
 
 (comment 
 (encrypt numbercodemap :h)
-(encrypt lettercodemap :h))
- 
+(encrypt lettercodemap :h)
+(decrypt numbercodemap 6)
+)
